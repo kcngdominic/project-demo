@@ -92,26 +92,38 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--dropdown-bg);
+  background: var(--switcher-bg);
   border: 1px solid var(--border);
   padding: 8px 12px;
   border-radius: 12px;
 }
 
-.theme-switcher label {
+.theme-label {
   font-size: 12px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-.theme-switcher select {
-  border: none;
-  background: var(--dropdown-bg);
+.theme-switcher button {
+  border: 1px solid var(--border);
+  background: var(--surface);
   color: var(--text);
-  font-weight: 600;
-  outline: none;
-  padding-right: 4px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: transform 150ms ease, border-color 150ms ease, background 200ms ease;
+}
+
+.theme-switcher button:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+.theme-switcher button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .card-grid {

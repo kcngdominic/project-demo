@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
-import { themeOptions, themeVarsByKey } from './themes'
+import { themeVarsByKey } from './themes'
 
 const projects = [
   { title: 'Portfolio Refresh', desc: 'A sleek single-page experience with smooth, focused storytelling.' },
@@ -9,10 +9,10 @@ const projects = [
 ]
 
 export default function App() {
-  const [theme, setTheme] = useState('bento')
+  const [theme, setTheme] = useState('light')
 
   const themeVars = useMemo(() => {
-    const current = themeVarsByKey[theme] ?? themeVarsByKey.bento
+    const current = themeVarsByKey[theme] ?? themeVarsByKey.light
     return {
       '--bg': current.background,
       '--text': current.text,
@@ -21,10 +21,14 @@ export default function App() {
       '--border': current.border,
       '--accent': current.accent,
       '--accent-strong': current.accentStrong,
-      '--dropdown-bg': current.dropdownBg,
+      '--switcher-bg': current.switcherBg,
       '--font': current.font
     }
   }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+  }
 
   useEffect(() => {
     const root = document.documentElement
@@ -39,19 +43,10 @@ export default function App() {
         <div className="hero-top">
           <p className="eyebrow">Dominic's Showroom</p>
           <div className="theme-switcher">
-            <label htmlFor="theme-select">Theme</label>
-            <select
-              id="theme-select"
-              value={theme}
-              onChange={(e) => setTheme(e.target.value)}
-              aria-label="Select aesthetic theme"
-            >
-              {themeOptions.map(({ key, label }) => (
-                <option key={key} value={key}>
-                  {label}
-                </option>
-              ))}
-            </select>
+            <span className="theme-label">Theme</span>
+            <button type="button" onClick={toggleTheme} aria-label="Toggle light or dark theme">
+              {theme === 'light' ? 'Light' : 'Dark'}
+            </button>
           </div>
         </div>
 
