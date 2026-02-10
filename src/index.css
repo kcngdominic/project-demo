@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light;
+  font-family: var(--font, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif);
+  line-height: 1.5;
+  font-weight: 400;
+  --bg: #f9f9f9;
+  --text: #0f172a;
+  --muted: #475569;
+  --surface: rgba(255, 255, 255, 0.88);
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --dropdown-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 200ms ease, color 200ms ease;
+  font-family: var(--font, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
