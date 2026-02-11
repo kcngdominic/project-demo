@@ -21,8 +21,7 @@ export default function App() {
       '--border': current.border,
       '--accent': current.accent,
       '--accent-strong': current.accentStrong,
-      '--switcher-bg': current.switcherBg,
-      '--font': current.font
+      '--switcher-bg': current.switcherBg
     }
   }, [theme])
 

@@ -1,6 +1,7 @@
 :root {
   color-scheme: light;
-  font-family: var(--font, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif);
+  --font: 'Space Grotesk', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: var(--font);
   line-height: 1.5;
   font-weight: 400;
   --bg: #f9f9f9;
@@ -24,7 +25,7 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: background 200ms ease, color 200ms ease;
-  font-family: var(--font, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif);
+  font-family: var(--font);
 }
 
 a {

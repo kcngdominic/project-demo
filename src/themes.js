@@ -8,8 +8,7 @@ export const themes = {
     border: '#e5e7eb',
     accent: '#E7473C',
     accentStrong: '#c53030',
-    switcherBg: '#f8fafc',
-    font: "'Helvetica Neue', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif"
+    switcherBg: '#f8fafc'
   },
   dark: {
     label: 'Dark',
@@ -20,8 +19,7 @@ export const themes = {
     border: '#1e293b',
     accent: '#22D3EE',
     accentStrong: '#06b6d4',
-    switcherBg: '#0b1220',
-    font: "'Space Grotesk', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif"
+    switcherBg: '#0b1220'
   }
 }
 
